@@ -1,0 +1,94 @@
+
+ /* html,body{
+  height: 100%;
+  width: 100%;
+  background-color: aqua;
+  background-image: url("../images/background.png");
+
+}
+.container {
+	background-image: url("../images/background.png");
+	min-height: 90%;
+	margin-bottom: 20px;
+}
+.crystals{
+  display:flex;
+  justify-content:space-around;
+  border:1px solid red;
+  align-items:center;
+  
+}
+.crystal{
+  border:1px solid green;
+  height: 100px;
+  width: 100px;
+  border-radius: 4px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.7);
+  transition: box-shadow 1s; transform: 2s;
+  
+}
+.crystal:hover{
+  box-shadow: 15px 15px 15px rgba(0,0,0,0.7);  
+  transform: translate(5px,35px);
+  cursor: pointer;
+  transition: box-shadow 1s;transform: 2s;
+}
+img{
+  width: 50px;
+} */
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	background-image: url("../images/bkground.jpeg");
+}
+
+.scoreStyle {
+	background-color: #18f2dc;
+	font-size: 25px;
+	padding: 5px;
+}
+
+.jumbotron {
+	background-color: pink;
+}
+
+.container {
+
+	min-height: 90%;
+	margin-bottom: 20px;
+}
+
+.footer {
+	min-height: 10%;
+	overflow: auto;
+	background-color: yellow;
+}
+
+.footerContainer {
+	font-size: 10px;
+	padding: 10px;
+	margin-top: 30px;
+}
+
+.crystals{
+  display:flex;
+  justify-content:space-around;
+  border:1px solid red;
+  align-items:center;
+  
+}
+.crystal{
+  border:1px solid green;
+  height: 100px;
+  width: 100px;
+  border-radius: 4px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.7);
+  transition: box-shadow 1s; transform: 2s;
+  
+}
+.crystal:hover{
+  box-shadow: 15px 15px 15px rgba(0,0,0,0.7);  
+  transform: translate(5px,35px);
+  cursor: pointer;
+  transition: box-shadow 1s;transform: 2s;
