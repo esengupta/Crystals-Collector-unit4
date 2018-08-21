@@ -47,6 +47,39 @@ img{
   color: red;
 }
 
+/**crystal Container--start**/
+
+{
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/**crystal Container--End**/
+
+.footer {
+	min-height: 10%;
+	overflow: auto;
+	background-color: yellow;
+}
+
+.footerContainer {
+	font-size: 10px;
+	padding: 10px;
+	margin-top: 30px;
+}
+
 
 
 /* html, body {
@@ -66,22 +99,7 @@ img{
 	background-color: pink;
 }
 
-.container {
 
-	min-height: 90%;
-	margin-bottom: 20px;
-}
 
-.footer {
-	min-height: 10%;
-	overflow: auto;
-	background-color: yellow;
-}
-
-.footerContainer {
-	font-size: 10px;
-	padding: 10px;
-	margin-top: 30px;
-}
 
  */
