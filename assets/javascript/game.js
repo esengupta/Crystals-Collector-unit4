@@ -1,5 +1,5 @@
 
-var random_result=0;             
+var random_result;             
 var losses= 0;                      
 var win= 0;                      
 var totalScore= 0;
@@ -22,7 +22,7 @@ var images = [{name: "Crystal-1", src: "assets/images/blue.png", power: 0},
  {name: "Crystal-4", src: "assets/images/yellow.png", power: 0}]
 
 
-random_result = Math.floor(Math.random() * 121) + 19;    
+random_result = Math.floor(Math.random() * 120) + 19;    
 // console.log(random_result);
 $("#result").html('Random Result: '+ random_result);       
 
@@ -30,7 +30,7 @@ $("#result").html('Random Result: '+ random_result);
 for(var i = 0; i < 4; i++){                   
 
 // Every Crystal needs to have a random number 1-12
-   var random = Math.floor(Math.random() * 12) + 1;
+   var random = Math.floor(Math.random() * 11) + 1;
 
    var crystal = $("<div>");
        crystal.attr({
@@ -49,7 +49,7 @@ for(var i = 0; i < 4; i++){
 
   }
 
-  $("#totalScore").html("Total Score: "+ totalScore);
+  $("#totalScore").html( totalScore);
 }
 resetAndStart();
 

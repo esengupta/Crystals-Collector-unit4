@@ -9,9 +9,13 @@
 .container {
 	background-image: url("../images/background.png");
 	min-height: 90%;
-	margin-bottom: 20px;
+  margin-bottom: 20px;
+  height: 1140px;
+  width: 1260px;
+  background-size: cover;
+  
 }
-.crystals{
+.crystalcontainer{
   display:flex;
   justify-content:space-around;
   border:1px solid red;
@@ -35,7 +39,15 @@
 }
 img{
   width: 50px;
+  height: 50px;
+  
 }
+
+.lead{
+  color: red;
+}
+
+
 
 /* html, body {
 	margin: 0;
