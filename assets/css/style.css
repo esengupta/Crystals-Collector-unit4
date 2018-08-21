@@ -1,5 +1,5 @@
 
- /* html,body{
+ html,body{
   height: 100%;
   width: 100%;
   background-color: aqua;
@@ -35,8 +35,9 @@
 }
 img{
   width: 50px;
-} */
-html, body {
+}
+
+/* html, body {
 	margin: 0;
 	padding: 0;
 	height: 100%;
@@ -71,24 +72,4 @@ html, body {
 	margin-top: 30px;
 }
 
-.crystals{
-  display:flex;
-  justify-content:space-around;
-  border:1px solid red;
-  align-items:center;
-  
-}
-.crystal{
-  border:1px solid green;
-  height: 100px;
-  width: 100px;
-  border-radius: 4px;
-  box-shadow: 5px 5px 5px rgba(0,0,0,0.7);
-  transition: box-shadow 1s; transform: 2s;
-  
-}
-.crystal:hover{
-  box-shadow: 15px 15px 15px rgba(0,0,0,0.7);  
-  transform: translate(5px,35px);
-  cursor: pointer;
-  transition: box-shadow 1s;transform: 2s;
+ */
