@@ -1,158 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Crystals Collector-unit-4</title>
 
-    <!-- Added link to the jQuery Library -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
+<head>
+  <meta charset="UTF-8">
+  <title>Crystals Collector-unit-4</title>
+
+  <!-- Added link to the jQuery Library -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- Added a link to Bootstrap-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">  
-  <link rel="stylesheet" herf="assets/css/style.css">
-  </head>
-  <body>
-      <!-- <img class="background-color Blue" src="assets/images/background.png"> -->
-    <div class="container">
-        <img class="background-color Blue" src="assets/images/background.png">
-        <div class="jumbotron text-center">
-            <h1 class="display-3">Crystal Collector!</h1>
-            <p class="lead">Game Instructions: Win the game by matching your total score to the random result.</p>
-            <p> There are four crystals below: Blue, Green, Red, Yellow.</p>
-            <p>By clicking on a crystal, you will add a specific amount of points to your total score.</p>
-          <p>You win the game by matching your total score to the random number.</p>
-          <p>You lose the game if your total score goes above the random number.</p>
-          <p>The value of each crystal is hidden from you until you click on it.</p>
-          <p>Each time when the game starts, the game will change the values of each crystal.</p>
-          <p>Click on the crystals to add points to your score.</p>
-          </div>
-          <div class="row">
-              <div class="col-md-6 col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                      <div class="row">
-                        <div class="col-md-12 col-sm-12">
-                          <h2 class="card-title">Random Result</h2>
-                          <p id="result"></p>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
 
-                        </div>
-                      </div>
-                       <!-- <div class="row">
-                          <div class="col-md-6 col-sm-6">	
-                             <p class="card-text scoreStyle text-center" id="targetNum"></p>
-                           </div>
-                         </div>		  -->
-                        </div>
-                  </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                          <div class="row">
-                            <div class="col-md-6 col-sm-6 col-xs-6">
-                              <h2 class="card-title text-center">Win:</h2>
-                              <p id="win"></p>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-6">
-                              <h2 class="card-title text-center">Losses:</h2>
-                              <p id="lost"></p>
-                            </div>	
-                          </div>
-                          <div class="row">	
-                            <div class="col-md-6 col-sm-6 col-xs-6">	
-                              <p class="card-text scoreStyle text-center" id="win"></p>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-6">
-                              <p class="card-text scoreStyle text-center" id="losses"></p>
-                            </div>
-                          </div>				
-                            </div>
-                    </div>
-                  </div>
-              </div> 
-              <!-- ************** -->
-              <p id="result"></p> 
-              
-              
+<body>
+  <audio src="assets/audio/alarm_clock_1.wav" id="loserSound"></audio>
+  
+  <audio src="assets/audio/app-5.mp3" id="winnerSound"></audio>
+
+  <div class="container">
     
-    
+    <div class="jumbotron text-center">
+      <h1 class="display-3">Crystal Collector!</h1>
+      <p class="lead">Game Instructions: Win the game by matching your total score to the random result.</p>
+      <p> There are four crystals below: Blue, Green, Red, Yellow.</p>
+      <p>By clicking on a crystal, you will add a specific amount of points to your total score.</p>
+      <p>You win the game by matching your total score to the random number.</p>
+      <p>You lose the game if your total score goes above the random number.</p>
+      <p>The value of each crystal is hidden from you until you click on it.</p>
+      <p>Each time when the game starts, the game will change the values of each crystal.</p>
+      <p>Click on the crystals to add points to your score.</p>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-12 col-sm-12">
+                <h2 class="card-title">Random Result</h2>
+                <p id="result"></p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6 col-sm-6 col-xs-6">
+                <h2 class="card-title text-center">Wins</h2>
+                <p id="win"></p>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-6">
+                <h2 class="card-title text-center">Losses</h2>
+                <p id="lost"></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 col-sm-6 col-xs-6">
+                <p class="card-text scoreStyle text-center" id="win"></p>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-6">
+                <p class="card-text scoreStyle text-center" id="losses"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ************** -->
+    <p id="result"></p>
     <script type="text/javascript" src="assets/javascript/game.js"></script>
     <!-- **************************************************  -->
-
-              <div class="row" id="crystalContainer">
-                  <!-- <div class="crystals">
-
-                  </div>  -->
-                  <div class="row">
-                    <div class="column">
-                      <img src="assets/images/blue.png" alt="blue" style="width:100%">
-                    </div>
-                    <div class="column">
-                      <img src="assets/images/green.png" alt="green" style="width:100%">
-                    </div>
-                    <div class="column">
-                      <img src="assets/images/red.png" alt="red" style="width:100%">
-                    </div>
-                    <div class="column">
-                      <img src="assets/images/yellow.png" alt="yellow" style="width:100%">
-                    </div>
-                  </div>
-                  
-                  <!-- <div class="col-sm-3 col-sm-3 col-xs-3">
-                      <img class="crystal1" src="assets/images/blue.png">
-                    
-                         <div class="col-sm-3 col-sm-3 col-xs-3">
-                          <img class="crystal2" src="assets/images/green.png">
-                          <div class="col-sm-3 col-sm-3 col-xs-3">
-                              <img class="crystal3" src="assets/images/red.png">
-                              <div class="col-sm-3 col-sm-3 col-xs-3">
-                                  <img class="crystal4" src="assets/images/yellow.png">
-                                
-                                </div>
-                            </div>
-                        </div>
-                  </div> -->
-              </div>
-              <div class="row">
-                  <div class="col-md-12 col-sm-12">
-                    <div class="card">
-                        <div class="card-body">
-                          <div class="row">
-                            <div class="col-md-12 col-sm-12">
-                              <h2 class="card-title text-center"id="totalScore">Your Total Score :</h2>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4">	
-                             <!-- <p  id="totalScore"></p> -->
-                             </div>
-                           </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>	
-            
-            <footer class="footer text-center">
-                <div class="footerContainer">
-
-                    <p><a href="https://esengupta.github.io/Crystals-Collector-unit4/">GitHub Repo-esengupta</a>
-                      <br>@ 2018 Enakshi </p>
-                  
-                </div>  
-              </footer>
-              <script src="assets/javascript/game.js"></script>
-     
-    
-    
-
-
-    <!-- <p id="result"></p>
-    <div class="crystals">
-
+    <div class="row crystals justify-content-center" id="crystalContainer">
+        
     </div>
-    <p id="totalScore">Total score</p>
-    <p id="win">Win:</p>
-    <p id="lost">Lost:</p>
-    <script type="text/javascript" src="assets/javascript/game.js"></script> -->
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-12 col-sm-12">
+                <h2 class="card-title text-center" id="totalScore">Your Total Score :</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4">
+                <!-- <p  id="totalScore"></p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  </body>
+    <footer class="footer text-center">
+      <div class="footerContainer">
+
+        <p><a href="https://esengupta.github.io/Crystals-Collector-unit4/">GitHub Repo-esengupta</a>
+          <br>@ 2018 Enakshi </p>
+
+      </div>
+    </footer>
+    <script src="assets/javascript/game.js"></script>
+
+
+
+</body>
+
 </html>
