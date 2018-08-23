@@ -8,7 +8,7 @@ var audioElement1 = document.createElement("audio");
 audioElement1.setAttribute("src", "assets/audio/app-5.mp3");
 audioElement1.volume = 1;
 var audioElement2 = document.createElement("audio");
-audioElement2.setAttribute("src", "assets/audio/alarm_clock_1.wav");
+audioElement2.setAttribute("src", "assets/audio/boooo.mp3");
 audioElement2.volume = 1;
 
 //Setters
