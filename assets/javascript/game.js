@@ -101,15 +101,7 @@ $(document).on('click', ".crystal", function () {
 
 //when clicking at CRYSTAL, it should adding with the totalScore result 
 // until it equals the random result
-
-
-
-
-
-
 // Speudo coding
-
-
 
 // A new number shoukd be generate every single time we win or lost
 // to those 4 crystals
